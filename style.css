@@ -1,0 +1,305 @@
+﻿/* ===== ОБЩИЕ СТИЛИ ===== */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: #f4f4f9;
+    color: #333;
+    line-height: 1.6;
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* ===== СТИЛИ ДЛЯ ГЛАВНОЙ СТРАНИЦЫ (index.html) ===== */
+
+/* Шапка главной страницы */
+.main-header {
+    text-align: center;
+    padding: 40px 20px;
+    background: linear-gradient(135deg, #1a2a44 0%, #2d3b5e 100%);
+    color: white;
+    border-radius: 10px;
+    margin-bottom: 40px;
+}
+
+.main-header h1 {
+    font-size: 2.8rem;
+    margin-bottom: 10px;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
+}
+
+.main-subtitle {
+    font-size: 1.2rem;
+    font-weight: 300;
+    max-width: 800px;
+    margin: 0 auto;
+    opacity: 0.9;
+}
+
+/* Вступление на главной */
+.main-intro {
+    background-color: white;
+    padding: 25px;
+    border-radius: 10px;
+    margin-bottom: 40px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
+    border-left: 5px solid #2d3b5e;
+}
+
+/* Поиск на главной */
+.search-box {
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+#searchInput {
+    width: 80%;
+    max-width: 500px;
+    padding: 12px 20px;
+    border: 2px solid #ddd;
+    border-radius: 50px;
+    font-size: 1rem;
+    transition: border-color 0.3s;
+}
+
+#searchInput:focus {
+    outline: none;
+    border-color: #3498db;
+}
+
+/* Сетка карточек на главной */
+.stratagems-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 20px;
+    margin-bottom: 40px;
+    flex-grow: 1;
+}
+
+.stratagem-card {
+    background: white;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+    transition: all 0.3s ease;
+    border-top: 4px solid #e74c3c;
+    text-decoration: none;
+    display: block;
+    color: inherit;
+    cursor: pointer;
+}
+
+.stratagem-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.card-number {
+    background-color: #e74c3c;
+    color: white;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    font-size: 1.1rem;
+    margin-bottom: 15px;
+}
+
+.card-title {
+    font-size: 1.3rem;
+    color: #2c3e50;
+    margin-bottom: 10px;
+}
+
+.card-desc {
+    font-size: 0.95rem;
+    color: #666;
+}
+
+.hidden {
+    display: none !important;
+}
+
+/* ===== СТИЛИ ДЛЯ СТРАНИЦ СТРАТАГЕМ (stratagem-1.html и т.д.) ===== */
+
+/* Контейнер страницы стратагемы */
+.stratagem-container {
+    background: white;
+    border-radius: 10px;
+    padding: 30px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    margin-top: 20px;
+    flex-grow: 1;
+}
+
+/* Шапка страницы стратагемы */
+.stratagem-header {
+    border-bottom: 2px solid #e74c3c;
+    padding-bottom: 20px;
+    margin-bottom: 30px;
+}
+
+.back-link {
+    color: #3498db;
+    text-decoration: none;
+    font-size: 0.95rem;
+    margin-bottom: 15px;
+    display: inline-block;
+}
+
+.back-link:hover {
+    text-decoration: underline;
+}
+
+.stratagem-header h1 {
+    color: #2c3e50;
+    margin-bottom: 10px;
+}
+
+.stratagem-subtitle {
+    color: #7f8c8d;
+    font-size: 1.1rem;
+    margin-bottom: 20px;
+}
+
+/* Мета-информация стратагемы */
+.meta-section {
+    background: #f8f9fa;
+    padding: 20px;
+    border-radius: 8px;
+    margin-bottom: 30px;
+}
+
+.meta-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 15px;
+}
+
+.meta-item h3 {
+    color: #2c3e50;
+    font-size: 1rem;
+    margin-bottom: 5px;
+}
+
+.meta-item p {
+    color: #555;
+}
+
+/* Контент с примерами */
+.content-section {
+    margin-bottom: 30px;
+}
+
+.section-title {
+    color: #1a2a44;
+    border-left: 4px solid #3498db;
+    padding-left: 15px;
+    margin: 25px 0 15px 0;
+}
+
+.example {
+    background: #f1f8ff;
+    border-left: 3px solid #3498db;
+    padding: 15px;
+    margin: 15px 0;
+    border-radius: 0 5px 5px 0;
+}
+
+.example h4 {
+    color: #2c3e50;
+    margin-bottom: 8px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+/* Навигация между стратагемами */
+.nav-links {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 40px;
+    padding-top: 20px;
+    border-top: 1px solid #eee;
+}
+
+.nav-btn {
+    padding: 10px 20px;
+    background: #f8f9fa;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    text-decoration: none;
+    color: #2c3e50;
+    transition: all 0.2s;
+}
+
+.nav-btn:hover {
+    background: #e9ecef;
+    transform: translateY(-2px);
+}
+
+/* ===== ОБЩИЕ ЭЛЕМЕНТЫ ===== */
+
+/* Подвал */
+footer {
+    text-align: center;
+    padding: 25px;
+    margin-top: 40px;
+    color: #7f8c8d;
+    font-size: 0.9rem;
+    border-top: 1px solid #ddd;
+}
+
+/* ===== АДАПТИВНОСТЬ ===== */
+@media (max-width: 768px) {
+    .stratagems-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .main-header h1 {
+        font-size: 2.2rem;
+    }
+    
+    #searchInput {
+        width: 95%;
+    }
+    
+    .meta-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .nav-links {
+        flex-direction: column;
+        gap: 10px;
+    }
+    
+    .nav-btn {
+        text-align: center;
+    }
+}
+
+@media (max-width: 480px) {
+    body {
+        padding: 10px;
+    }
+    
+    .stratagem-container,
+    .main-intro {
+        padding: 20px;
+    }
+    
+    .main-header {
+        padding: 30px 15px;
+    }
+}
